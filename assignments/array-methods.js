@@ -60,6 +60,8 @@ let fullName = [];
 runners.forEach((runner) => fullName.push(runner.first_name + ' ' + runner.last_name));
 // console.log(fullName);
 
+
+
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
@@ -70,6 +72,7 @@ runners.map((runner) => allCaps.push(runner.first_name.toUpperCase()));
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = runners.filter((runner) => runner.shirt_size === 'L');
+console.table(largeShirts);
 
 // console.log(largeShirts);
 
@@ -90,9 +93,9 @@ const shamefulRunners = runners.filter((runner) => runner.donation < 100);
 
 // Problem 2
 // The event director is interested in talking to all the runners who have donated more than $100 and are shirt size small or medium. He's upgraded their shirts to include a special logo. Get a list of all of those runners.
-const generousRunners = runners.filter((runner) => runner.donation > 100)
-    .filter((runner) => runner.shirt_size === 'S' || runner.shirt_size === 'M')
-    .map((runner) => runner.first_name + ' ' + runner.last_name)
-    .forEach((runner) => console.log(`Thank you for your generous donation, ${runner}!`));
+// const generousRunners = runners.filter((runner) => runner.donation > 100)
+//     .filter((runner) => runner.shirt_size === 'S' || runner.shirt_size === 'M')
+//     .map((runner) => runner.first_name + ' ' + runner.last_name)
+//     .forEach((runner) => console.log(`Thank you for your generous donation, ${runner}!`));
 
 // Problem 3
